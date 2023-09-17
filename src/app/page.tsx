@@ -2,6 +2,7 @@
 
 import { ShowAge } from "@/components/ShowAge";
 import { ShowName } from "@/components/ShowName";
+import { UserContext } from "@/context";
 import { useState } from "react";
 
 export type userProps = {
@@ -16,9 +17,9 @@ export default function Home() {
     });
 
     return (
-        <>
-            <ShowName props={user.name} />
-            <ShowAge props={user.age} />
-        </>
+        <UserContext.Provider value={user}>
+            <ShowName />
+            <ShowAge />
+        </UserContext.Provider>
     );
 }
