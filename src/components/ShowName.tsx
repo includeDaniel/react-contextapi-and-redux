@@ -1,7 +1,7 @@
-type ShowNameProps = {
-    props: string;
-};
+import { UserContext } from "@/context";
+import { useContext } from "react";
 
 export const ShowName = () => {
-    return <div>Name</div>;
+    const user = useContext(UserContext);
+    return <div>Name: {user?.name}</div>;
 };

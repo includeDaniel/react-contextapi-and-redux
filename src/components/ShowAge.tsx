@@ -1,7 +1,7 @@
-type ShowAgeProps = {
-    props: number;
-};
+import { UserContext } from "@/context";
+import { useContext } from "react";
 
 export const ShowAge = () => {
-    return <div>Age:</div>;
+    const user = useContext(UserContext);
+    return <div>Age: {user?.age}</div>;
 };
