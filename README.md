@@ -1,2 +1,2 @@
 # react-contextapi
-Learning react contexApi
+Learning react contexApi and redux
