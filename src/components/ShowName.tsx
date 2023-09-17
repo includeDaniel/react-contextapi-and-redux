@@ -1,7 +1,7 @@
-import { UserContext } from "@/context";
-import { useContext } from "react";
+import { useUserContext } from "@/context";
 
 export const ShowName = () => {
-    const user = useContext(UserContext);
-    return <div>Name: {user?.name}</div>;
+    const user = useUserContext();
+
+    return <div>Name: {user.name}</div>;
 };
