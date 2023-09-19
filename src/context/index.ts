@@ -1,4 +1,4 @@
-import { userProps } from "@/app/page";
+import { userProps } from "../components/TestingUseContext";
 import { createContext, useContext } from "react";
 
 export const UserContext = createContext<userProps | undefined>(undefined);
